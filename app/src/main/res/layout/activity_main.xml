@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:scrollbarFadeDuration="3000"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_bluetooth"
+            android:text="蓝牙"
+            android:layout_marginLeft="20px"
+            android:layout_marginBottom="30px"
+            android:layout_marginTop="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Switch
+            android:id="@+id/sw_bluetooth"
+            android:gravity="center"
+            android:focusable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200px"
+            android:layout_toEndOf="@id/tv_bluetooth"
+            android:button="@drawable/time_settings_auto_sync"
+            android:textOn=""
+            android:textOff=""
+            android:thumb="@null"
+            android:track="@null" />
+
+        <TextView
+            android:id="@+id/tv_name_tip"
+            android:text="设备名称"
+            android:layout_marginLeft="20px"
+            android:layout_marginBottom="20px"
+            android:layout_below="@+id/tv_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:minWidth="50px"
+            android:layout_marginLeft="50px"
+            android:layout_toEndOf="@id/tv_name_tip"
+            android:layout_below="@+id/tv_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_paired_device_tip"
+            android:text="已配对设备"
+            android:layout_marginLeft="20px"
+            android:layout_marginBottom="20px"
+            android:layout_below="@+id/tv_name_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_paired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_paired_device_tip"
+            />
+
+        <TextView
+            android:id="@+id/tv_use_device_tip"
+            android:text="可用设备"
+            android:layout_marginLeft="20px"
+            android:layout_marginBottom="20px"
+            android:gravity="center_vertical"
+            android:drawablePadding="15px"
+            android:layout_below="@+id/recycler_view_paired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_use"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_use_device_tip"
+            />
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
